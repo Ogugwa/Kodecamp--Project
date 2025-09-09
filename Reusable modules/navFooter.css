@@ -1,0 +1,81 @@
+.navbar-nav {
+  gap: 1.5rem; /* adjust spacing */
+}
+footer {
+  background-color: #111827; /* dark but softer than pure black */
+  color: #d1d5db; /* subtle gray text */
+}
+footer h5 {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+footer .nav-link {
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+
+footer .nav-link:hover {
+  color: #22d3ee; /* matches your btn-outline-info */
+}
+
+footer input[type="email"] {
+  border-radius: 0.5rem;
+  border: none;
+}
+
+footer button {
+  border-radius: 0.5rem;
+  background-color: #22d3ee;
+  border: none;
+}
+
+footer button:hover {
+  background-color: #0ea5e9; /* darker cyan */
+}
+
+footer .border-top {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+footer p {
+  margin: 0;
+  color: #9ca3af;
+}
+
+footer .list-unstyled a {
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+
+footer .list-unstyled a:hover {
+  color: #22d3ee;
+}
+/* Default look */
+footer .list-unstyled a svg {
+  width: 24px;
+  height: 24px;
+  fill: #9ca3af; /* neutral gray */
+  transition: fill 0.3s ease;
+}
+
+/* Hover colors per brand */
+footer a[aria-label="Instagram"]:hover svg {
+  fill: #e4405f; /* Instagram Pink/Red */
+}
+
+footer a[aria-label="Twitter"]:hover svg {
+  fill: #1da1f2; /* Twitter Blue */
+}
+
+footer a[aria-label="LinkedIn"]:hover svg {
+  fill: #0a66c2; /* LinkedIn Blue */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .navbar-nav {
+    gap: 0.5rem;
+  }
+}

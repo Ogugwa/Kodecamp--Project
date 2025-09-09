@@ -1,14 +1,34 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 4rem 0; /* Add breathing room to all sections */
 }
 .hero-section {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-     /* height: 100vh; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center; */
+  background: url("images/hero-bg.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.hero-section h1 {
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  margin-bottom: 2rem;
+}
+.carousel-item img {
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
 }
