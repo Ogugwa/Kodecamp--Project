@@ -119,7 +119,67 @@
         </div>
       </div>
     </nav>
-    <main></main>
+    <main>
+      <!-- Hero section -->
+      <section class="hero py-5">
+        <div class="container text-center">
+          <h1 class="display-4">Join the Clean City Movement</h1>
+          <p class="lead">Together, we can make a difference.</p>
+          <a href="#" class="btn btn-primary btn-lg">Take the Pledge</a>
+        </div>
+      </section>
+      <!-- Pledge Form -->
+      <section class="pledge-form py-5 bg-light">
+        <div class="container">
+          <h2 class="mb-4 text-center">Pledge to Reduce Waste</h2>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="pledge" class="form-label">Your Pledge</label>
+              <textarea
+                class="form-control"
+                id="pledge"
+                rows="4"
+                placeholder="Describe your commitment to reducing waste"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">
+              Submit Pledge
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- Pledge List -->
+      <section class="pledge-list py-5">
+        <div class="container">
+          <h2 class="mb-4 text-center">Recent Pledges</h2>
+          <p class="text-center fw-bold">
+            Total Pledges: <span id="pledgeCount">0</span>
+          </p>
+          <div class="list-group" id="pledgeList"></div>
+        </div>
+      </section>
+    </main>
     <footer class="footer py-5 mt-5">
       <div class="container">
         <div class="row">
@@ -233,5 +293,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="./pledge.js"></script>
   </body>
 </html>

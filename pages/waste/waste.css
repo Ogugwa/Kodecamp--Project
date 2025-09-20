@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 4rem 0; /* Add breathing room to all sections */
+}
+.fade {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.fade.show {
+  opacity: 1;
+}

@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../../Reusable modules/navFooter.css" />
+    <link rel="stylesheet" href="./waste.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-dark px-3 py-2 navbar-dark" id="top">
@@ -119,7 +120,149 @@
         </div>
       </div>
     </nav>
-    <main></main>
+    <main>
+      <!-- Hero Section -->
+      <section class="text-center bg-light py-5">
+        <div class="container">
+          <h1 class="display-5 fw-bold">Waste Management</h1>
+          <p class="fs-5 mt-3">
+            Learn about different types of waste, their environmental impact,
+            and effective ways to reduce, recycle, and manage them in daily
+            life.
+          </p>
+        </div>
+      </section>
+      <!-- Accordion Section -->
+      <section class="container my-5">
+        <div class="accordion" id="wasteaccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#plastic"
+              >
+                Plastic Waste
+              </button>
+            </h2>
+            <div
+              id="plastic"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#wasteAccordion"
+            >
+              <div class="accordion-body">
+                Plastic waste is one of the biggest environmental challenges...
+              </div>
+            </div>
+          </div>
+          <!-- Organic -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#organic"
+              >
+                Organic Waste
+              </button>
+            </h2>
+            <div
+              id="organic"
+              class="accordion-collapse collapse"
+              data-bs-parent="#wasteAccordion"
+            >
+              <div class="accordion-body">
+                Organic waste includes food scraps, garden waste, and other
+                biodegradable items...
+              </div>
+            </div>
+          </div>
+          <!-- E-Waste -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#ewaste"
+              >
+                E-Waste
+              </button>
+            </h2>
+            <div
+              id="ewaste"
+              class="accordion-collapse collapse"
+              data-bs-parent="#wasteAccordion"
+            >
+              <div class="accordion-body">
+                E-waste consists of old electronics like phones, computers, and
+                batteries...
+              </div>
+            </div>
+          </div>
+          <!-- Paper -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#paper"
+              >
+                Paper
+              </button>
+            </h2>
+            <div
+              id="paper"
+              class="accordion-collapse collapse"
+              data-bs-parent="#wasteAccordion"
+            >
+              <div class="accordion-body">
+                Recycling paper reduces deforestation and saves resources like
+                water and energy.
+              </div>
+            </div>
+          </div>
+          <!-- Glass -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#glass"
+              >
+                Glass
+              </button>
+            </h2>
+            <div
+              id="glass"
+              class="accordion-collapse collapse"
+              data-bs-parent="#wasteAccordion"
+            >
+              <div class="accordion-body">
+                Glass can be recycled indefinitely without losing quality...
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Did you know section -->
+      <section class="my-5 mx-5 text-center p-4 bg-light rounded-3 shadow-sm">
+        <div class="container">
+          <h2 class="mb-3">Did you know?</h2>
+          <p id="didYouKnowBox" class="fs-5 text-muted">
+            Recycling one ton of paper can save 17 trees, 7,000 gallons of
+            water, and 4,100 kWh of energy.
+          </p>
+          <button class="btn btn-info text-white" id="newFactBtn">
+            New Fact
+          </button>
+        </div>
+      </section>
+    </main>
     <footer class="footer py-5 mt-5">
       <div class="container">
         <div class="row">
@@ -233,5 +376,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="./waste.js"></script>
   </body>
 </html>

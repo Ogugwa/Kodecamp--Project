@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../../Reusable modules/navFooter.css" />
+    <link rel="stylesheet" href="./tracker.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-dark px-3 py-2 navbar-dark" id="top">
@@ -119,7 +120,89 @@
         </div>
       </div>
     </nav>
-    <main></main>
+    <main>
+      <!-- Hero Section -->
+      <section class="text-center bg-light py-5">
+        <div class="container">
+          <h1 class="display-5 fw-bold">Recycling Tracker</h1>
+          <p class="fs-5 mt-3">
+            Log your recycling efforts, track your progress, and earn
+            achievement badges for making a positive environmental impact.
+          </p>
+        </div>
+      </section>
+      <!-- Form for tracking -->
+      <section>
+        <form id="recyclingForm" class="container my-5">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select a Waste Category</option>
+            <option value="1">Plastic</option>
+            <option value="2">Organic</option>
+            <option value="3">E-waste</option>
+            <option value="4">Paper</option>
+            <option value="5">Glass</option>
+          </select>
+          <div class="mb-3 mt-3">
+            <label for="quantity" class="form-label">Quantity (in kg)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="quantity"
+              placeholder="Enter quantity recycled"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary mb-3">
+            Log Recycling
+          </button>
+        </form>
+      </section>
+      <!-- Search + Sort Controls -->
+      <section
+        class="container my-4 d-flex justify-content-between align-items-center flex-wrap gap-3"
+      >
+        <input
+          type="text"
+          id="searchInput"
+          class="form-control w-50"
+          placeholder="Search logs by category..."
+        />
+        <select id="sortSelect" class="form-select w-auto">
+          <option value="default">Sort by</option>
+          <option value="category">Category (A–Z)</option>
+          <option value="quantity">Quantity (Low → High)</option>
+        </select>
+      </section>
+
+      <!-- Badge Notification -->
+      <div class="container my-3">
+        <div id="badgeContainer" class="alert alert-success d-none"></div>
+      </div>
+
+      <!-- Table Section -->
+      <section class="container my-5">
+        <h2 class="mb-3">Your Recycling Logs</h2>
+        <table class="table table-striped" id="logsTable">
+          <thead class="table-dark">
+            <tr>
+              <th>Category</th>
+              <th>Quantity (kg)</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      <div class="d-flex justify-content-end mb-3">
+        <button class="btn btn-outline-danger btn-sm" id="clearAllBtn">
+          Clear All Logs
+        </button>
+      </div>
+      <!-- Chart Section -->
+      <section class="container my-5">
+        <h2 class="mb-3">Progress by Category</h2>
+        <canvas id="recyclingChart" width="400" height="200"></canvas>
+      </section>
+    </main>
     <footer class="footer py-5 mt-5">
       <div class="container">
         <div class="row">
@@ -233,5 +316,7 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./tracker.js"></script>
   </body>
 </html>
